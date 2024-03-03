@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">nftMap</string>
+    <string name="title_map">Home</string>
+    <string name="title_web3modal">Web3Modal</string>
+    <string name="title_qrScan">QrScan</string>
+
+</resources>

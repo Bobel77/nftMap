@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_web3">
+
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.example.nftmap.MapFragment"
+        android:label="@string/title_map"
+        tools:layout="@layout/fragment_map" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_qrScan"
+        android:name="com.example.nftmap.QrScanner"
+        android:label="@string/title_qrScan"
+        tools:layout="@layout/fragment_map" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_web3"
+        android:name="com.example.nftmap.Web3ModalFragment"
+        android:label="@string/title_web3modal"
+        tools:layout="@layout/fragment_web3modal" >
+    </fragment>
+
+    <include app:graph ="@navigation/web3modal_graph"/>
+
+
+</navigation>
