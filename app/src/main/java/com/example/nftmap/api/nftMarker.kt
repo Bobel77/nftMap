@@ -12,4 +12,5 @@ data class NftMarker(
     val nftName: String,
     val key: String,
     val wallet: String,
-    var country: String?)
+    var country: String?
+)

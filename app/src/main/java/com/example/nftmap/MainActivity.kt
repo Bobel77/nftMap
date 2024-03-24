@@ -1,78 +1,19 @@
 package com.example.nftmap;
 
-import android.os.Bundle
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 
-import com.example.nftmap.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import android.Manifest
 import android.content.pm.PackageManager
+import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.Surface
-import androidx.compose.material3.rememberModalBottomSheetState
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.ui.Modifier
-
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.core.view.WindowCompat
 import com.example.nftmap.navigation.AppNavigation
+/*import com.example.nftmap.nftwallet.test*/
 import com.example.nftmap.nftwallet.web3m
-import com.walletconnect.web3.modal.ui.components.button.rememberWeb3ModalState
-import com.walletconnect.web3.modal.ui.components.internal.Web3ModalComponent
-import com.walletconnect.web3.modal.ui.openWeb3Modal
-import kotlinx.coroutines.launch
 
-/*
-class MainActivity : AppCompatActivity() {
-
-    private val myPermissions = arrayListOf(
-        Manifest.permission.CAMERA,
-        Manifest.permission.READ_EXTERNAL_STORAGE,
-        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-        Manifest.permission.ACCESS_FINE_LOCATION,
-        Manifest.permission.ACCESS_COARSE_LOCATION,
-        Manifest.permission.INTERNET
-    )
-    private lateinit var binding: ActivityMainBinding
-
-    private val PERMISSION_REQUEST_CODE = 123
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        val navView: BottomNavigationView = binding.navView
-
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_map, R.id.navigation_web3, R.id.navigation_qrScan
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-
-        checkPermissions(myPermissions)
-        web3m(this)
-   *//*    navController.openWeb3Modal(
-            shouldOpenChooseNetwork = false
-
-        )*//*
-
-    }*/
 class MainActivity : AppCompatActivity() {
     private val myPermissions = arrayListOf(
         Manifest.permission.CAMERA,
@@ -91,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
             checkPermissions(myPermissions)
                  AppNavigation()
-
+           /*   test()*/
 
         }
 

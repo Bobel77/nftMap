@@ -8,16 +8,13 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.ExperimentalMaterial3Api
-
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
 import com.budiyev.android.codescanner.AutoFocusMode
@@ -27,13 +24,10 @@ import com.budiyev.android.codescanner.DecodeCallback
 import com.budiyev.android.codescanner.ScanMode
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
-import com.example.nftmap.api.NftMarker
 import com.example.nftmap.api.PostsService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-
-
 
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalGlideComposeApi::class)

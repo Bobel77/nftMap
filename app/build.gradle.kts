@@ -1,5 +1,3 @@
-import java.net.URL
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -55,19 +53,17 @@ dependencies {
         exclude(module = "bcprov-jdk15on")
     }
     //Compose
-    implementation("androidx.compose.foundation:foundation:1.6.2")
+    /*implementation("androidx.compose.foundation:foundation:1.6.4")*/
     implementation("androidx.navigation:navigation-compose:$nav_version")
     implementation("com.google.gms:google-services:4.4.1")
 
   //qr scan
-    implementation ("com.github.yuriy-budiyev:code-scanner:2.3.0")/*
-    implementation("com.github.skydoves:landscapist-glide:1.3.7")*/
-/*    implementation ("com.github.bumptech.glide:glide:4.12.0")*/
+    implementation ("com.github.yuriy-budiyev:code-scanner:2.3.0")
     implementation( "com.github.bumptech.glide:compose:1.0.0-beta01")
     /// Crypto
     implementation("com.google.code.gson:gson:2.10.1")
 
-    implementation(platform("com.walletconnect:android-bom:1.23.0"))
+    implementation(platform("com.walletconnect:android-bom:1.30.0"))
     implementation("com.walletconnect:android-core")
     implementation("com.walletconnect:web3modal")
 
@@ -96,17 +92,9 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-/*    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")*/
 
     //Map and Location
-    implementation ("com.google.android.gms:play-services-location:21.1.0")
+    implementation ("com.google.android.gms:play-services-location:21.2.0")
     implementation ("org.osmdroid:osmdroid-android:6.1.14")
 
-/*    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")*/
 }

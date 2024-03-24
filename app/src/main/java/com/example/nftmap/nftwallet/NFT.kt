@@ -2,11 +2,6 @@ package com.example.nftmap.nftwallet
 
 
 
-import android.R
-import android.graphics.BitmapFactory
-import android.graphics.drawable.BitmapDrawable
-import android.widget.ImageView
-import android.widget.LinearLayout
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import io.ktor.client.HttpClient
@@ -21,7 +16,7 @@ import kotlinx.serialization.json.Json
 
 
 interface UserNftsService{
-   suspend fun fillNfts(): MutableList<NftsOwned>
+   suspend fun fillNfts(user:String): MutableList<NftsOwned>
 
     companion object {
         fun create(): UserNfts {
@@ -44,10 +39,10 @@ class UserNfts(
 
 
  override suspend fun fillNfts(
-     /* user: String =  "0x341C7e53f7Eac085e5F3a22D87595CD906428b9d"*/
+      user: String
  ): MutableList<NftsOwned> {
 
-     val user = "0x341C7e53f7Eac085e5F3a22D87595CD906428b9d"
+
      val apiKey = "oePN0h4P8Iff4BgZV9y3ZA0SGNdbtvK4"
      val apiUrl = "https://eth-mainnet.g.alchemy.com/nft/v3/$apiKey/getNFTsForOwner?owner=$user&withMetadata=true&pageSize=100"
 
